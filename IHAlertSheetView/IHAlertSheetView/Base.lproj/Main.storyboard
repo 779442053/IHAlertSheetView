@@ -18,31 +18,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFx-yM-Knt">
-                                <rect key="frame" x="541" y="70" width="39" height="30"/>
-                                <state key="normal" title="sheet"/>
+                                <rect key="frame" x="460" y="70" width="120" height="30"/>
+                                <state key="normal" title="sheet-有取消按钮"/>
                                 <connections>
-                                    <action selector="sheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Fd-Jn-Goh"/>
+                                    <action selector="test2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yeo-2w-Ug6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08j-rx-as4">
                                 <rect key="frame" x="548" y="30" width="32" height="30"/>
                                 <state key="normal" title="alert"/>
                                 <connections>
-                                    <action selector="alert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0R3-68-ouD"/>
+                                    <action selector="test1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gK3-hW-Wav"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivk-N1-ZMe">
+                                <rect key="frame" x="445" y="110" width="135" height="30"/>
+                                <state key="normal" title="sheet-没有取消按钮"/>
+                                <connections>
+                                    <action selector="test3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oUp-9y-2L7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ivk-N1-ZMe" firstAttribute="top" secondItem="DFx-yM-Knt" secondAttribute="bottom" constant="10" id="VVq-yh-sGb"/>
                             <constraint firstAttribute="trailing" secondItem="DFx-yM-Knt" secondAttribute="trailing" constant="20" id="YIG-VB-iGX"/>
                             <constraint firstAttribute="trailing" secondItem="08j-rx-as4" secondAttribute="trailing" constant="20" id="btU-PR-JWR"/>
                             <constraint firstItem="08j-rx-as4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ddV-53-Jtc"/>
+                            <constraint firstAttribute="trailing" secondItem="ivk-N1-ZMe" secondAttribute="trailing" constant="20" id="ieB-EX-78c"/>
                             <constraint firstItem="DFx-yM-Knt" firstAttribute="top" secondItem="08j-rx-as4" secondAttribute="bottom" constant="10" id="zMg-8Q-OQE"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="438" y="338"/>
         </scene>
     </scenes>
 </document>

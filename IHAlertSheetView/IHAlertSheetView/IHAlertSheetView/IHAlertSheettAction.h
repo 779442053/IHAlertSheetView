@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^BMBlock)(NSString *string);
+
 @interface IHAlertSheettAction : NSObject
 
 @property (nonatomic, copy, readonly) NSString *title;
@@ -15,5 +17,7 @@
 @property (nonatomic, copy, readonly) dispatch_block_t handlerBlock;
 
 + (instancetype)alertSheettActionWithTitle:(NSString *)title handler:(dispatch_block_t)handler;
+
+
 
 @end
