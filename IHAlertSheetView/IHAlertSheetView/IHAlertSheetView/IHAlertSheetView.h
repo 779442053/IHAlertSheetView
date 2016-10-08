@@ -21,14 +21,41 @@
 
 @interface IHAlertSheetView : UIView
 
+/*!
+ *  @brief 创建一个 alert
+ *
+ *  @param title   title
+ *  @param message message
+ */
 + (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message;
 
+/*!
+ *  @brief 创建一个 Sheet
+ *
+ *  @param title       title
+ *  @param message     message
+ *  @param cancelTitle 取消按钮的文字
+ *  @param handler     取消按钮点击的block
+ */
 + (instancetype)sheetWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle handler:(dispatch_block_t)handler;
 
+/*!
+ *  @brief 为 IHAlertSheetView 添加一个按钮
+ *
+ *  @param action IHAlertSheettAction 对象
+ */
 - (void)addAction:(IHAlertSheettAction *)action;
 
+/*!
+ *  @brief 为 IHAlertSheetView 添加一组IHAlertSheettAction
+ *
+ *  @param actions IHAlertSheettAction数组
+ */
 - (void)addActions:(NSArray <IHAlertSheettAction *>*)actions;
 
+/*!
+ *  @brief 显示 IHAlertSheetView
+ */
 - (void)show;
 
 @end
