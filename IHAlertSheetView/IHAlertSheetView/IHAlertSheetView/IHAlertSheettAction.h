@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^BMBlock)(NSString *string);
-
 @interface IHAlertSheettAction : NSObject
 
 @property (nonatomic, copy, readonly) NSString *title;
