@@ -13,7 +13,7 @@
 ## 2、使用
  
 ### 2.1、Alert
- 
+ ```
      IHAlertSheetView *alertSheet = [IHAlertSheetView alertWithTitle:@"温馨提示" message:nil];
     [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:@"OK" handler:^{
         NSLog(@"OK");
@@ -22,8 +22,9 @@
         NSLog(@"CANCEL");
     }]];
     [alertSheet show];
-    
+```
 ### 2.1、Sheet
+```
 	IHAlertSheetView *alertSheet = [IHAlertSheetView sheetWithTitle:@"温馨提示" message:nil cancelTitle: nil  handler:^{
         NSLog(@"cencel");
     }];
@@ -34,7 +35,7 @@
         NSLog(@"CANCEL");
     }]];
     [alertSheet show];
-    
+```
 ## 3、API
    <p><img src="http://images2015.cnblogs.com/blog/724434/201610/724434-20161008153831114-623641417.png" alt="" /></p>
 
