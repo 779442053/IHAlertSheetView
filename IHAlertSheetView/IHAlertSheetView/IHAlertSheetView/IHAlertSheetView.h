@@ -7,54 +7,46 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "IHAlertSheettAction.h"
 
-/*!
- 本view 主要是为了解决  
- UIAlertView
- UIActionSheet
- UIAlertController
- 的使用和版本问题
- 全部使用 UIAlertController的回调方式处理
- 目前只是实现简单的弹窗功能，其实我们使用它基本是使用最简单的提示框而一
- */
+@interface IHAlertSheettAction : NSObject
+
+@property (nonatomic, copy, readonly) NSString *title;
+
+@property (nonatomic, copy, readonly) dispatch_block_t handlerBlock;
+
++ (instancetype)alertSheettActionWithTitle:(NSString *)title handler:(dispatch_block_t)handler;
+
+@end
+
+typedef void(^IHHandlerBlock)(NSInteger index);
+
 
 @interface IHAlertSheetView : UIView
 
 /*!
- *  @brief 创建一个 alert
- *
- *  @param title   title
- *  @param message message
+ *  @brief 创建 alert
  */
 + (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message;
 
 /*!
- *  @brief 创建一个 Sheet
- *
- *  @param title       title
- *  @param message     message
- *  @param cancelTitle 取消按钮的文字
- *  @param handler     取消按钮点击的block
+ *  @brief 创建 sheet
  */
 + (instancetype)sheetWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle handler:(dispatch_block_t)handler;
 
 /*!
- *  @brief 为 IHAlertSheetView 添加一个按钮
- *
- *  @param action IHAlertSheettAction 对象
+ *  @brief 添加 按钮
  */
 - (void)addAction:(IHAlertSheettAction *)action;
+- (void)addButtonWithTitle:(NSString *)title handler:(dispatch_block_t)handler;
 
 /*!
- *  @brief 为 IHAlertSheetView 添加一组IHAlertSheettAction
- *
- *  @param actions IHAlertSheettAction数组
+ *  @brief 添加多个按钮
  */
 - (void)addActions:(NSArray <IHAlertSheettAction *>*)actions;
+- (void)addButtonWithTitles:(NSArray<NSString *>*)titles handler:(IHHandlerBlock)handler;
 
 /*!
- *  @brief 显示 IHAlertSheetView
+ *  @brief show alertSheetView
  */
 - (void)show;
 

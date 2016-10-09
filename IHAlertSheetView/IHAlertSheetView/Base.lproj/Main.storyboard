@@ -38,15 +38,42 @@
                                     <action selector="test3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oUp-9y-2L7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puk-1H-j7v">
+                                <rect key="frame" x="460" y="190" width="120" height="30"/>
+                                <state key="normal" title="sheet-有取消按钮"/>
+                                <connections>
+                                    <action selector="test5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jyc-RU-FdO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wur-Nz-U6M">
+                                <rect key="frame" x="548" y="150" width="32" height="30"/>
+                                <state key="normal" title="alert"/>
+                                <connections>
+                                    <action selector="test4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMm-BI-yQq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-Ef-jHl">
+                                <rect key="frame" x="445" y="230" width="135" height="30"/>
+                                <state key="normal" title="sheet-没有取消按钮"/>
+                                <connections>
+                                    <action selector="test6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycH-Kd-E78"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="puk-1H-j7v" firstAttribute="top" secondItem="Wur-Nz-U6M" secondAttribute="bottom" constant="10" id="3c2-rr-2Qh"/>
+                            <constraint firstItem="tdl-Ef-jHl" firstAttribute="top" secondItem="puk-1H-j7v" secondAttribute="bottom" constant="10" id="BCl-wQ-4fL"/>
+                            <constraint firstAttribute="trailing" secondItem="Wur-Nz-U6M" secondAttribute="trailing" constant="20" id="I41-oy-2q9"/>
                             <constraint firstItem="ivk-N1-ZMe" firstAttribute="top" secondItem="DFx-yM-Knt" secondAttribute="bottom" constant="10" id="VVq-yh-sGb"/>
                             <constraint firstAttribute="trailing" secondItem="DFx-yM-Knt" secondAttribute="trailing" constant="20" id="YIG-VB-iGX"/>
+                            <constraint firstItem="Wur-Nz-U6M" firstAttribute="top" secondItem="ivk-N1-ZMe" secondAttribute="bottom" constant="10" id="acW-1Q-WPG"/>
                             <constraint firstAttribute="trailing" secondItem="08j-rx-as4" secondAttribute="trailing" constant="20" id="btU-PR-JWR"/>
                             <constraint firstItem="08j-rx-as4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ddV-53-Jtc"/>
                             <constraint firstAttribute="trailing" secondItem="ivk-N1-ZMe" secondAttribute="trailing" constant="20" id="ieB-EX-78c"/>
+                            <constraint firstAttribute="trailing" secondItem="tdl-Ef-jHl" secondAttribute="trailing" constant="20" id="x7U-Ze-feg"/>
                             <constraint firstItem="DFx-yM-Knt" firstAttribute="top" secondItem="08j-rx-as4" secondAttribute="bottom" constant="10" id="zMg-8Q-OQE"/>
+                            <constraint firstAttribute="trailing" secondItem="puk-1H-j7v" secondAttribute="trailing" constant="20" id="zzZ-2c-bdl"/>
                         </constraints>
                     </view>
                 </viewController>

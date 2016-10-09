@@ -8,8 +8,28 @@
 
 #import "IHAlertSheetView.h"
 
-#define kSystemVersionFloatValue     [[[UIDevice currentDevice] systemVersion] floatValue]
+#define kSystemVersionFloatValue      [[[UIDevice currentDevice] systemVersion] floatValue]
 #define kOS_VERSION_MIN_REQUIRED_7_0  __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
+#define kweak(sel)                    __weak typeof(sel) w##sel = sel;
+#define kstrong(sel)                  __strong typeof(w##sel) sel = w##sel;
+
+@interface IHAlertSheettAction ()
+@property (nonatomic, copy, readwrite) NSString *title;
+@property (nonatomic, copy, readwrite) dispatch_block_t handlerBlock;
+@end
+
+@implementation IHAlertSheettAction
+
++ (instancetype)alertSheettActionWithTitle:(NSString *)title handler:(dispatch_block_t)handler {
+    IHAlertSheettAction *alertAction = [IHAlertSheettAction new];
+    alertAction.title = title;
+    alertAction.handlerBlock = handler;
+    return alertAction;
+}
+@end
+
+#pragma mark -
+#pragma mark -
 
 @interface IHAlertSheetView ()
 #if kOS_VERSION_MIN_REQUIRED_7_0
@@ -58,7 +78,10 @@
         }
     } else {
         if (cancelTitle) {
+
+            kweak(handler)
             UIAlertAction *alertAction = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction *actio) {
+                kstrong(handler)
                 if (handler) {
                     handler();
                 }
@@ -69,7 +92,9 @@
 #else
     alertSheet.alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:0];
     if (cancelTitle) {
+        kweak(handler)
         UIAlertAction *alertAction = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction *actio) {
+            kstrong(handler)
             if (handler) {
                 handler();
             }
@@ -92,7 +117,9 @@
             [self.blocks addObject:action.handlerBlock];
         }
     }else{
+        kweak(action)
         UIAlertAction *alertAction = [UIAlertAction actionWithTitle:action.title style:UIAlertActionStyleDefault handler:^(UIAlertAction *actio) {
+            kstrong(action)
             if (action.handlerBlock) {
                 action.handlerBlock();
             }
@@ -100,7 +127,9 @@
         [self.alertController addAction:alertAction];
     }
 #else
+    kweak(action)
     UIAlertAction *alertAction = [UIAlertAction actionWithTitle:action.title style:UIAlertActionStyleDefault handler:^(UIAlertAction *actio) {
+        kstrong(action)
         if (action.handlerBlock) {
             action.handlerBlock();
         }
@@ -129,6 +158,20 @@
 #else
     [[self _topViewController] presentViewController:self.alertController animated:YES completion:nil];
 #endif
+}
+
+- (void)addButtonWithTitle:(NSString *)title handler:(dispatch_block_t)handler {
+    [self addAction:[IHAlertSheettAction alertSheettActionWithTitle:title handler:handler]];
+}
+
+- (void)addButtonWithTitles:(NSArray<NSString *> *)titles handler:(IHHandlerBlock)handler {
+    [titles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self addAction:[IHAlertSheettAction alertSheettActionWithTitle:obj handler:^{
+            if (handler) {
+                handler(idx);
+            }
+        }]];
+    }];
 }
 
 #if kOS_VERSION_MIN_REQUIRED_7_0

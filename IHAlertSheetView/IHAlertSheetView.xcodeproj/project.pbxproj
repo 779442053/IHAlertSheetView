@@ -15,7 +15,6 @@
 		32B98B4E1DA8CF3A00322B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B98B4C1DA8CF3A00322B63 /* LaunchScreen.storyboard */; };
 		32B98B591DA8CF3B00322B63 /* IHAlertSheetViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B98B581DA8CF3B00322B63 /* IHAlertSheetViewTests.m */; };
 		32B98B641DA8CF3B00322B63 /* IHAlertSheetViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B98B631DA8CF3B00322B63 /* IHAlertSheetViewUITests.m */; };
-		32B98B761DA8CF4300322B63 /* IHAlertSheettAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B98B731DA8CF4300322B63 /* IHAlertSheettAction.m */; };
 		32B98B771DA8CF4300322B63 /* IHAlertSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B98B751DA8CF4300322B63 /* IHAlertSheetView.m */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +52,6 @@
 		32B98B5F1DA8CF3B00322B63 /* IHAlertSheetViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IHAlertSheetViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B98B631DA8CF3B00322B63 /* IHAlertSheetViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IHAlertSheetViewUITests.m; sourceTree = "<group>"; };
 		32B98B651DA8CF3B00322B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32B98B721DA8CF4300322B63 /* IHAlertSheettAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IHAlertSheettAction.h; sourceTree = "<group>"; };
-		32B98B731DA8CF4300322B63 /* IHAlertSheettAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IHAlertSheettAction.m; sourceTree = "<group>"; };
 		32B98B741DA8CF4300322B63 /* IHAlertSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IHAlertSheetView.h; sourceTree = "<group>"; };
 		32B98B751DA8CF4300322B63 /* IHAlertSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IHAlertSheetView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,8 +147,6 @@
 		32B98B711DA8CF4300322B63 /* IHAlertSheetView */ = {
 			isa = PBXGroup;
 			children = (
-				32B98B721DA8CF4300322B63 /* IHAlertSheettAction.h */,
-				32B98B731DA8CF4300322B63 /* IHAlertSheettAction.m */,
 				32B98B741DA8CF4300322B63 /* IHAlertSheetView.h */,
 				32B98B751DA8CF4300322B63 /* IHAlertSheetView.m */,
 			);
@@ -289,7 +284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32B98B771DA8CF4300322B63 /* IHAlertSheetView.m in Sources */,
-				32B98B761DA8CF4300322B63 /* IHAlertSheettAction.m in Sources */,
 				32B98B461DA8CF3A00322B63 /* ViewController.m in Sources */,
 				32B98B431DA8CF3A00322B63 /* AppDelegate.m in Sources */,
 				32B98B401DA8CF3A00322B63 /* main.m in Sources */,
@@ -436,7 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IHAlertSheetView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.IHAlertSheetView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,7 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IHAlertSheetView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.IHAlertSheetView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -520,6 +514,7 @@
 				32B98B6A1DA8CF3B00322B63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32B98B6B1DA8CF3B00322B63 /* Build configuration list for PBXNativeTarget "IHAlertSheetViewTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +523,7 @@
 				32B98B6D1DA8CF3B00322B63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32B98B6E1DA8CF3B00322B63 /* Build configuration list for PBXNativeTarget "IHAlertSheetViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +532,7 @@
 				32B98B701DA8CF3B00322B63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
