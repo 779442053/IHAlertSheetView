@@ -10,11 +10,11 @@
 
 @interface IHAlertSheettAction : NSObject
 
-@property (nonatomic, copy, readonly) NSString *title;
+@property (nonatomic, copy, readonly, nullable) NSString *title;
 
-@property (nonatomic, copy, readonly) dispatch_block_t handlerBlock;
+@property (nonatomic, copy, readonly, nullable) dispatch_block_t handlerBlock;
 
-+ (instancetype)alertSheettActionWithTitle:(NSString *)title handler:(dispatch_block_t)handler;
++ (nonnull instancetype)alertSheettActionWithTitle:(nullable NSString *)title handler:(nullable dispatch_block_t)handler;
 
 @end
 
@@ -26,24 +26,26 @@ typedef void(^IHHandlerBlock)(NSInteger index);
 /*!
  *  @brief 创建 alert
  */
-+ (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message;
++ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *)message;
 
 /*!
  *  @brief 创建 sheet
  */
-+ (instancetype)sheetWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle handler:(dispatch_block_t)handler;
-
++ (nonnull instancetype)sheetWithTitle:(nullable NSString *)title
+                               message:(nullable NSString *)message
+                           cancelTitle:(nullable NSString *)cancelTitle
+                               handler:(nullable dispatch_block_t)handler;
 /*!
  *  @brief 添加 按钮
  */
-- (void)addAction:(IHAlertSheettAction *)action;
-- (void)addButtonWithTitle:(NSString *)title handler:(dispatch_block_t)handler;
+- (void)addAction:(nullable IHAlertSheettAction *)action;
+- (void)addButtonWithTitle:(nullable NSString *)title handler:(nullable dispatch_block_t)handler;
 
 /*!
  *  @brief 添加多个按钮
  */
-- (void)addActions:(NSArray <IHAlertSheettAction *>*)actions;
-- (void)addButtonWithTitles:(NSArray<NSString *>*)titles handler:(IHHandlerBlock)handler;
+- (void)addActions:(nullable NSArray <IHAlertSheettAction *>*)actions;
+- (void)addButtonWithTitles:(nullable NSArray<NSString *>*)titles handler:(nullable IHHandlerBlock)handler;
 
 /*!
  *  @brief show alertSheetView
