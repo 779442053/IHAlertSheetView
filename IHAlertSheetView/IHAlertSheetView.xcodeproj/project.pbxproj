@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32594CFF1DAA3B50002F6D4F /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32594CFA1DAA3B50002F6D4F /* SVIndefiniteAnimatedView.m */; };
+		32594D001DAA3B50002F6D4F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32594CFC1DAA3B50002F6D4F /* SVProgressHUD.bundle */; };
+		32594D011DAA3B50002F6D4F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 32594CFE1DAA3B50002F6D4F /* SVProgressHUD.m */; };
 		32B98B401DA8CF3A00322B63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B98B3F1DA8CF3A00322B63 /* main.m */; };
 		32B98B431DA8CF3A00322B63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B98B421DA8CF3A00322B63 /* AppDelegate.m */; };
 		32B98B461DA8CF3A00322B63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B98B451DA8CF3A00322B63 /* ViewController.m */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32594CF91DAA3B50002F6D4F /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		32594CFA1DAA3B50002F6D4F /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		32594CFB1DAA3B50002F6D4F /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		32594CFC1DAA3B50002F6D4F /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		32594CFD1DAA3B50002F6D4F /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		32594CFE1DAA3B50002F6D4F /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		32B98B3B1DA8CF3A00322B63 /* IHAlertSheetView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHAlertSheetView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B98B3F1DA8CF3A00322B63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32B98B411DA8CF3A00322B63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +90,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32594CF81DAA3B50002F6D4F /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				32594CF91DAA3B50002F6D4F /* SVIndefiniteAnimatedView.h */,
+				32594CFA1DAA3B50002F6D4F /* SVIndefiniteAnimatedView.m */,
+				32594CFB1DAA3B50002F6D4F /* SVProgressHUD-Prefix.pch */,
+				32594CFC1DAA3B50002F6D4F /* SVProgressHUD.bundle */,
+				32594CFD1DAA3B50002F6D4F /* SVProgressHUD.h */,
+				32594CFE1DAA3B50002F6D4F /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		32B98B321DA8CF3A00322B63 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +126,7 @@
 		32B98B3D1DA8CF3A00322B63 /* IHAlertSheetView */ = {
 			isa = PBXGroup;
 			children = (
+				32594CF81DAA3B50002F6D4F /* SVProgressHUD */,
 				32B98B711DA8CF4300322B63 /* IHAlertSheetView */,
 				32B98B411DA8CF3A00322B63 /* AppDelegate.h */,
 				32B98B421DA8CF3A00322B63 /* AppDelegate.m */,
@@ -259,6 +282,7 @@
 				32B98B4E1DA8CF3A00322B63 /* LaunchScreen.storyboard in Resources */,
 				32B98B4B1DA8CF3A00322B63 /* Assets.xcassets in Resources */,
 				32B98B491DA8CF3A00322B63 /* Main.storyboard in Resources */,
+				32594D001DAA3B50002F6D4F /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,10 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32594CFF1DAA3B50002F6D4F /* SVIndefiniteAnimatedView.m in Sources */,
 				32B98B771DA8CF4300322B63 /* IHAlertSheetView.m in Sources */,
 				32B98B461DA8CF3A00322B63 /* ViewController.m in Sources */,
 				32B98B431DA8CF3A00322B63 /* AppDelegate.m in Sources */,
 				32B98B401DA8CF3A00322B63 /* main.m in Sources */,
+				32594D011DAA3B50002F6D4F /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,62 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFx-yM-Knt">
-                                <rect key="frame" x="460" y="70" width="120" height="30"/>
-                                <state key="normal" title="sheet-有取消按钮"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puk-1H-j7v">
+                                <rect key="frame" x="500" y="40" width="40" height="30"/>
+                                <state key="normal" title="Sheet"/>
                                 <connections>
-                                    <action selector="test2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yeo-2w-Ug6"/>
+                                    <action selector="sheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHW-s3-FDB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08j-rx-as4">
-                                <rect key="frame" x="548" y="30" width="32" height="30"/>
-                                <state key="normal" title="alert"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-Ef-jHl">
+                                <rect key="frame" x="497" y="80" width="33" height="30"/>
+                                <state key="normal" title="Alert"/>
                                 <connections>
-                                    <action selector="test1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gK3-hW-Wav"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivk-N1-ZMe">
-                                <rect key="frame" x="445" y="110" width="135" height="30"/>
-                                <state key="normal" title="sheet-没有取消按钮"/>
-                                <connections>
-                                    <action selector="test3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oUp-9y-2L7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puk-1H-j7v">
-                                <rect key="frame" x="460" y="190" width="120" height="30"/>
-                                <state key="normal" title="sheet-有取消按钮"/>
-                                <connections>
-                                    <action selector="test5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jyc-RU-FdO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wur-Nz-U6M">
-                                <rect key="frame" x="548" y="150" width="32" height="30"/>
-                                <state key="normal" title="alert"/>
-                                <connections>
-                                    <action selector="test4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMm-BI-yQq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-Ef-jHl">
-                                <rect key="frame" x="445" y="230" width="135" height="30"/>
-                                <state key="normal" title="sheet-没有取消按钮"/>
-                                <connections>
-                                    <action selector="test6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycH-Kd-E78"/>
+                                    <action selector="alert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MV1-lx-Jpm"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="puk-1H-j7v" firstAttribute="top" secondItem="Wur-Nz-U6M" secondAttribute="bottom" constant="10" id="3c2-rr-2Qh"/>
                             <constraint firstItem="tdl-Ef-jHl" firstAttribute="top" secondItem="puk-1H-j7v" secondAttribute="bottom" constant="10" id="BCl-wQ-4fL"/>
-                            <constraint firstAttribute="trailing" secondItem="Wur-Nz-U6M" secondAttribute="trailing" constant="20" id="I41-oy-2q9"/>
-                            <constraint firstItem="ivk-N1-ZMe" firstAttribute="top" secondItem="DFx-yM-Knt" secondAttribute="bottom" constant="10" id="VVq-yh-sGb"/>
-                            <constraint firstAttribute="trailing" secondItem="DFx-yM-Knt" secondAttribute="trailing" constant="20" id="YIG-VB-iGX"/>
-                            <constraint firstItem="Wur-Nz-U6M" firstAttribute="top" secondItem="ivk-N1-ZMe" secondAttribute="bottom" constant="10" id="acW-1Q-WPG"/>
-                            <constraint firstAttribute="trailing" secondItem="08j-rx-as4" secondAttribute="trailing" constant="20" id="btU-PR-JWR"/>
-                            <constraint firstItem="08j-rx-as4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ddV-53-Jtc"/>
-                            <constraint firstAttribute="trailing" secondItem="ivk-N1-ZMe" secondAttribute="trailing" constant="20" id="ieB-EX-78c"/>
+                            <constraint firstItem="puk-1H-j7v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="fKf-hi-gKr"/>
                             <constraint firstAttribute="trailing" secondItem="tdl-Ef-jHl" secondAttribute="trailing" constant="20" id="x7U-Ze-feg"/>
-                            <constraint firstItem="DFx-yM-Knt" firstAttribute="top" secondItem="08j-rx-as4" secondAttribute="bottom" constant="10" id="zMg-8Q-OQE"/>
                             <constraint firstAttribute="trailing" secondItem="puk-1H-j7v" secondAttribute="trailing" constant="20" id="zzZ-2c-bdl"/>
                         </constraints>
                     </view>

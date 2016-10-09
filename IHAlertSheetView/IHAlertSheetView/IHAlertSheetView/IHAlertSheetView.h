@@ -38,14 +38,14 @@ typedef void(^IHHandlerBlock)(NSInteger index);
 /*!
  *  @brief 添加 按钮
  */
-- (void)addAction:(nullable IHAlertSheettAction *)action;
 - (void)addButtonWithTitle:(nullable NSString *)title handler:(nullable dispatch_block_t)handler;
+- (void)addAction:(nullable IHAlertSheettAction *)action;
 
 /*!
  *  @brief 添加多个按钮
  */
-- (void)addActions:(nullable NSArray <IHAlertSheettAction *>*)actions;
 - (void)addButtonWithTitles:(nullable NSArray<NSString *>*)titles handler:(nullable IHHandlerBlock)handler;
+- (void)addActions:(nullable NSArray <IHAlertSheettAction *>*)actions;
 
 /*!
  *  @brief show alertSheetView

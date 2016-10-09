@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "IHAlertSheetView.h"
+#import "SVProgressHUD.h"
 
 @interface ViewController ()
 
@@ -15,93 +16,28 @@
 
 @implementation ViewController
 
-- (IBAction)test1:(id)sender {
-    IHAlertSheetView *alertSheet = [IHAlertSheetView alertWithTitle:@"温馨提示" message:nil];
-    [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:@"OK" handler:^{
-        NSLog(@"OK");
-    }]];
-    int arc = arc4random_uniform(5)+1;
-    while (arc--) {
-        [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:[NSString stringWithFormat:@"button-%d", arc] handler:^{
-            NSLog(@"button - %d", arc);
-        }]];
-    }
-    [alertSheet show];
-}
 
-- (IBAction)test2:(id)sender {
-    IHAlertSheetView *alertSheet = [IHAlertSheetView sheetWithTitle:@"温馨提示" message:nil cancelTitle:nil handler:nil];
-    
-    [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:@"OK" handler:^{
-        NSLog(@"OK");
-    }]];
-    int arc = arc4random_uniform(5)+1;
-    while (arc--) {
-        [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:[NSString stringWithFormat:@"button-%d", arc] handler:^{
-            NSLog(@"button - %d", arc);
-        }]];
-    }
-    [alertSheet show];
-}
+- (IBAction)sheet:(id)sender {
 
-- (IBAction)test3:(id)sender {
-    IHAlertSheetView *alertSheet = [IHAlertSheetView sheetWithTitle:@"温馨提示" message:nil cancelTitle:@"cancel"  handler:^{
-        NSLog(@"cencel");
+    IHAlertSheetView *alertSheet = [IHAlertSheetView sheetWithTitle:@"分享到以下平台" message:nil cancelTitle:@"取消" handler:nil];
+    [alertSheet addButtonWithTitle:@"QQ" handler:^{
+        [SVProgressHUD showSuccessWithStatus:@"分享到 QQ"];
     }];
-    [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:@"OK" handler:^{
-        NSLog(@"OK");
-    }]];
-
-    int arc = arc4random_uniform(5)+1;
-    while (arc--) {
-        [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:[NSString stringWithFormat:@"button-%d", arc] handler:^{
-            NSLog(@"button - %d", arc);
-        }]];
-    }
+    [alertSheet addButtonWithTitle:@"新浪微博" handler:^{
+        [SVProgressHUD showSuccessWithStatus:@"分享到 新浪微博"];
+    }];
     [alertSheet show];
+
 }
 
+- (IBAction)alert:(id)sender {
 
-- (IBAction)test4:(id)sender {
-    
-    IHAlertSheetView *alertSheet = [IHAlertSheetView alertWithTitle:@"温馨提示" message:nil];
-    [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:@"OK" handler:^{
-        NSLog(@"OK");
-    }]];
-    int arc = arc4random_uniform(5)+1;
-    while (arc--) {
-        [alertSheet addButtonWithTitle:[NSString stringWithFormat:@"button-%d", arc] handler:^{
-            NSLog(@"button - %d", arc);
-        }];
-    }
-    [alertSheet show];
-}
-
-- (IBAction)test5:(id)sender {
-    IHAlertSheetView *alertSheet = [IHAlertSheetView sheetWithTitle:@"温馨提示" message:nil cancelTitle:nil handler:nil];
-    
-    [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:@"OK" handler:^{
-        NSLog(@"OK");
-    }]];
-    int arc = arc4random_uniform(5)+1;
-    while (arc--) {
-        [alertSheet addButtonWithTitle:[NSString stringWithFormat:@"button-%d", arc] handler:^{
-            NSLog(@"button - %d", arc);
-        }];
-    }
-    [alertSheet show];
-}
-
-- (IBAction)test6:(id)sender {
-    IHAlertSheetView *alertSheetView = [IHAlertSheetView alertWithTitle:@"title" message:@"mess"];
+    IHAlertSheetView *alertSheetView = [IHAlertSheetView alertWithTitle:@"是否继续此操作？" message:nil];
     [alertSheetView addButtonWithTitle:@"确定" handler:^{
-        NSLog(@"确定");
+        [SVProgressHUD showSuccessWithStatus:@"确定"];
     }];
     [alertSheetView addButtonWithTitle:@"取消" handler:^{
-        NSLog(@"取消");
-    }];
-    [alertSheetView addButtonWithTitle:@"好的" handler:^{
-        NSLog(@"好的");
+        [SVProgressHUD showSuccessWithStatus:@"取消"];
     }];
     [alertSheetView show];
 }

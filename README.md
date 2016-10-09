@@ -14,26 +14,24 @@
  
 ### 2.1、Alert
  ```
-     IHAlertSheetView *alertSheet = [IHAlertSheetView alertWithTitle:@"温馨提示" message:nil];
-    [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:@"OK" handler:^{
-        NSLog(@"OK");
-    }]];
-    [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:@"CANCEL" handler:^{
-        NSLog(@"CANCEL");
-    }]];
-    [alertSheet show];
+    IHAlertSheetView *alertSheetView = [IHAlertSheetView alertWithTitle:@"是否继续此操作？" message:nil];
+    [alertSheetView addButtonWithTitle:@"确定" handler:^{
+        [SVProgressHUD showSuccessWithStatus:@"确定"];
+    }];
+    [alertSheetView addButtonWithTitle:@"取消" handler:^{
+        [SVProgressHUD showSuccessWithStatus:@"取消"];
+    }];
+    [alertSheetView show];
 ```
 ### 2.1、Sheet
 ```
-	IHAlertSheetView *alertSheet = [IHAlertSheetView sheetWithTitle:@"温馨提示" message:nil cancelTitle: nil  handler:^{
-        NSLog(@"cencel");
+    IHAlertSheetView *alertSheet = [IHAlertSheetView sheetWithTitle:@"分享到以下平台" message:nil cancelTitle:@"取消" handler:nil];
+    [alertSheet addButtonWithTitle:@"QQ" handler:^{
+        [SVProgressHUD showSuccessWithStatus:@"分享到 QQ"];
     }];
-    [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:@"OK" handler:^{
-        NSLog(@"OK");
-    }]];
-    [alertSheet addAction:[IHAlertSheettAction alertSheettActionWithTitle:@"CANCEL" handler:^{
-        NSLog(@"CANCEL");
-    }]];
+    [alertSheet addButtonWithTitle:@"新浪微博" handler:^{
+        [SVProgressHUD showSuccessWithStatus:@"分享到 新浪微博"];
+    }];
     [alertSheet show];
 ```
 ## 3、API
