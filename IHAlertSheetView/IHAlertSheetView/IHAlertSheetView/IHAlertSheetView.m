@@ -147,6 +147,9 @@
             }
         }]];
     }];
+    
+    __IPHONE_OS_VERSION_MAX_ALLOWED;
+//    值等于Base SDK，即用于检查SDK版本的。
 }
 #if k__IPHONE_OS_VERSION_MIN_REQUIRED_7_0_
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

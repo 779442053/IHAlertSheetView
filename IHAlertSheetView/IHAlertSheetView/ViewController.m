@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "IHAlertSheetView.h"
 #import "SVProgressHUD.h"
+#import "IHAlertActionSheet.h"
 
 @interface ViewController ()
 
@@ -18,27 +19,28 @@
 
 
 - (IBAction)sheet:(id)sender {
-
-    IHAlertSheetView *alertSheet = [IHAlertSheetView sheetWithTitle:@"分享到以下平台" message:nil cancelTitle:@"取消" handler:nil];
-    [alertSheet addButtonWithTitle:@"QQ" handler:^{
-        [SVProgressHUD showSuccessWithStatus:@"分享到 QQ"];
+    
+    IHAlertActionSheet *alertActionSheet = [IHAlertActionSheet sheetWithTitle:@"分享到以下平台" cancelTitle:@"cancel" handler:^{
     }];
-    [alertSheet addButtonWithTitle:@"新浪微博" handler:^{
-        [SVProgressHUD showSuccessWithStatus:@"分享到 新浪微博"];
+    [alertActionSheet addButtonWithTitle:@"QQ" handler:^{
+        [SVProgressHUD showSuccessWithStatus:@"QQ"];
     }];
-    [alertSheet show];
+    [alertActionSheet addButtonWithTitle:@"WB" handler:^{
+        [SVProgressHUD showSuccessWithStatus:@"WB"];
+    }];
+    [alertActionSheet show];
 
 }
 
 - (IBAction)alert:(id)sender {
-
-    IHAlertSheetView *alertSheetView = [IHAlertSheetView alertWithTitle:@"是否继续此操作？" message:nil];
-    [alertSheetView addButtonWithTitle:@"确定" handler:^{
+    
+    IHAlertActionSheet *alertActionSheet = [[IHAlertActionSheet alloc] initWithTitle:@"title" message:nil];
+    [alertActionSheet addButtonWithTitle:@"确定" handler:^{
         [SVProgressHUD showSuccessWithStatus:@"确定"];
     }];
-    [alertSheetView addButtonWithTitle:@"取消" handler:^{
+    [alertActionSheet addButtonWithTitle:@"取消" handler:^{
         [SVProgressHUD showSuccessWithStatus:@"取消"];
     }];
-    [alertSheetView show];
+    [alertActionSheet show];
 }
 @end
