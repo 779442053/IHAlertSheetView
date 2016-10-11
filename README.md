@@ -13,61 +13,68 @@
 ## 2、使用
  
 ### 2.1、Alert
-<p>&nbsp;</p>
-<div class="cnblogs_code">
-<pre>    IHAlertSheetView *alertSheetView = [IHAlertSheetView alertWithTitle:<span style="color: #800000;">@"</span><span style="color: #800000;">是否继续此操作？</span><span style="color: #800000;">"</span><span style="color: #000000;"> message:nil];
-    [alertSheetView addButtonWithTitle:</span><span style="color: #800000;">@"</span><span style="color: #800000;">确定</span><span style="color: #800000;">"</span> handler:^<span style="color: #000000;">{
-        [SVProgressHUD showSuccessWithStatus:</span><span style="color: #800000;">@"</span><span style="color: #800000;">确定</span><span style="color: #800000;">"</span><span style="color: #000000;">];
+    IHAlertActionSheet *alertActionSheet = [IHAlertActionSheet alertWithTitle:@"提示" message:@"MNESS"];
+    [alertActionSheet addButtonWithTitle:@"取消" handlerBlock:^{
+        [SVProgressHUD showSuccessWithStatus:@"取消"];
     }];
-    [alertSheetView addButtonWithTitle:</span><span style="color: #800000;">@"</span><span style="color: #800000;">取消</span><span style="color: #800000;">"</span> handler:^<span style="color: #000000;">{
-        [SVProgressHUD showSuccessWithStatus:</span><span style="color: #800000;">@"</span><span style="color: #800000;">取消</span><span style="color: #800000;">"</span><span style="color: #000000;">];
+    [alertActionSheet addButtonWithTitle:@"确定" handlerBlock:^{
+        [SVProgressHUD showSuccessWithStatus:@"确定"];
     }];
-    [alertSheetView show];</span></pre>
-</div>
-<p>&nbsp;</p>
+    [alertActionSheet show];
 ### 2.1、Sheet
- <div class="cnblogs_code">
-<pre>    IHAlertSheetView *alertSheet = [IHAlertSheetView sheetWithTitle:<span style="color: #800000;">@"</span><span style="color: #800000;">分享到以下平台</span><span style="color: #800000;">"</span> message:nil cancelTitle:<span style="color: #800000;">@"</span><span style="color: #800000;">取消</span><span style="color: #800000;">"</span><span style="color: #000000;"> handler:nil];
-    [alertSheet addButtonWithTitle:</span><span style="color: #800000;">@"</span><span style="color: #800000;">QQ</span><span style="color: #800000;">"</span> handler:^<span style="color: #000000;">{
-        [SVProgressHUD showSuccessWithStatus:</span><span style="color: #800000;">@"</span><span style="color: #800000;">分享到 QQ</span><span style="color: #800000;">"</span><span style="color: #000000;">];
+    IHAlertActionSheet *alertActionSheet = [IHAlertActionSheet sheetWithTitle:@"分享到以下平台" cancelTitle:@"cancel" handlerBlock:^{
+        [SVProgressHUD showSuccessWithStatus:@"cancel"];
     }];
-    [alertSheet addButtonWithTitle:</span><span style="color: #800000;">@"</span><span style="color: #800000;">新浪微博</span><span style="color: #800000;">"</span> handler:^<span style="color: #000000;">{
-        [SVProgressHUD showSuccessWithStatus:</span><span style="color: #800000;">@"</span><span style="color: #800000;">分享到 新浪微博</span><span style="color: #800000;">"</span><span style="color: #000000;">];
+    [alertActionSheet addButtonWithTitle:@"QQ" handlerBlock:^{
+        [SVProgressHUD showSuccessWithStatus:@"QQ"];
     }];
-    [alertSheet show];</span></pre>
-</div>
-<p>&nbsp;</p>
- 
+    [alertActionSheet addButtonWithTitle:@"WB" handlerBlock:^{
+        [SVProgressHUD showSuccessWithStatus:@"WB"];
+    }];
+    [alertActionSheet show]; 
 ## 3、API
 
-<div class="cnblogs_code">
-<pre><span style="color: #008000;">/*</span><span style="color: #008000;">!
- *  @brief 创建 alert
- </span><span style="color: #008000;">*/</span>
-+ (nonnull instancetype)alertWithTitle:(nullable NSString *)title message:(nullable NSString *<span style="color: #000000;">)message;
+```
+/*!
+ *  @brief creat alert
+ *
+ *  @param title   title
+ *  @param message message
+ */
++ (nonnull instancetype)alertWithTitle:(nullable NSString *)title
+                               message:(nullable NSString *)message;
 
-</span><span style="color: #008000;">/*</span><span style="color: #008000;">!
- *  @brief 创建 sheet
- </span><span style="color: #008000;">*/</span>
-+ (nonnull instancetype)sheetWithTitle:(nullable NSString *<span style="color: #000000;">)title
-                               message:(nullable NSString </span>*<span style="color: #000000;">)message
-                           cancelTitle:(nullable NSString </span>*<span style="color: #000000;">)cancelTitle
-                               handler:(nullable dispatch_block_t)handler;
-</span><span style="color: #008000;">/*</span><span style="color: #008000;">!
- *  @brief 添加 按钮
- </span><span style="color: #008000;">*/</span>
-- (<span style="color: #0000ff;">void</span>)addButtonWithTitle:(nullable NSString *<span style="color: #000000;">)title handler:(nullable dispatch_block_t)handler;
-</span>- (<span style="color: #0000ff;">void</span>)addAction:(nullable IHAlertSheettAction *<span style="color: #000000;">)action;
+/*!
+ *  @brief creat alert sheet
+ *
+ *  @param title        title
+ *  @param cancelTitle  cancelTitle
+ *  @param handlerBlock handlerBlock
+ */
++ (nonnull instancetype)sheetWithTitle:(nullable NSString *)title
+                           cancelTitle:(nullable NSString *)cancelTitle
+                          handlerBlock:(nullable dispatch_block_t)handlerBlock;
 
-</span><span style="color: #008000;">/*</span><span style="color: #008000;">!
- *  @brief 添加多个按钮
- </span><span style="color: #008000;">*/</span>
-- (<span style="color: #0000ff;">void</span>)addButtonWithTitles:(nullable NSArray&lt;NSString *&gt;*<span style="color: #000000;">)titles handler:(nullable IHHandlerBlock)handler;
-</span>- (<span style="color: #0000ff;">void</span>)addActions:(nullable NSArray &lt;IHAlertSheettAction *&gt;*<span style="color: #000000;">)actions;
+/*!
+ *  @brief add Button
+ *
+ *  @param title        title
+ *  @param handlerBlock handlerBlock
+ */
+- (void)addButtonWithTitle:(nullable NSString *)title
+              handlerBlock:(nullable dispatch_block_t)handlerBlock;
 
-</span><span style="color: #008000;">/*</span><span style="color: #008000;">!
- *  @brief show alertSheetView
- </span><span style="color: #008000;">*/</span>
-- (<span style="color: #0000ff;">void</span>)show;</pre>
-</div>
-<p>&nbsp;</p>
+/*!
+ *  @brief add Buttons
+ *
+ *  @param titles       titles
+ *  @param handlerBlock handlerBlock
+ */
+- (void)addButtonWithTitles:(nullable NSArray<NSString *>*)titles
+               handlerBlock:(nullable IHAlertActionSheetHandlerBlock)handlerBlock;
+
+/*!
+ *  @brief show alertActionSheet
+ */
+- (void)show;
+```
