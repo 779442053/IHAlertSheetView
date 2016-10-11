@@ -24,19 +24,82 @@
                                     <action selector="sheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHW-s3-FDB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-Ef-jHl">
-                                <rect key="frame" x="497" y="80" width="33" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mw-OK-3OJ">
+                                <rect key="frame" x="521" y="140" width="49" height="30"/>
+                                <state key="normal" title="Sheet2"/>
+                                <connections>
+                                    <action selector="sheet2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Obk-Xz-rKn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88c-0z-26J">
+                                <rect key="frame" x="520" y="190" width="50" height="30"/>
+                                <state key="normal" title="Sheet3"/>
+                                <connections>
+                                    <action selector="sheet3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2G-28-nB0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-Ef-jHl">
+                                <rect key="frame" x="10" y="50" width="33" height="30"/>
                                 <state key="normal" title="Alert"/>
                                 <connections>
                                     <action selector="alert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MV1-lx-Jpm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndg-G2-Tqg">
+                                <rect key="frame" x="7" y="100" width="40" height="30"/>
+                                <state key="normal" title="Alert1"/>
+                                <connections>
+                                    <action selector="alert1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gBc-b5-PSY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVs-H2-sKw">
+                                <rect key="frame" x="5" y="200" width="43" height="30"/>
+                                <state key="normal" title="Alert3"/>
+                                <connections>
+                                    <action selector="alert3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jcO-fH-vo8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d4-Ns-KDj">
+                                <rect key="frame" x="6" y="150" width="42" height="30"/>
+                                <state key="normal" title="Alert2"/>
+                                <connections>
+                                    <action selector="alert2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OGF-gc-4u2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIX-G3-ZCr">
+                                <rect key="frame" x="523" y="90" width="47" height="30"/>
+                                <state key="normal" title="Sheet1"/>
+                                <connections>
+                                    <action selector="sheet1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tu6-ZA-1QW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjg-PV-p8u">
+                                <rect key="frame" x="5" y="250" width="43" height="30"/>
+                                <state key="normal" title="Alert4"/>
+                                <connections>
+                                    <action selector="alert4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="95c-nX-PtI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tdl-Ef-jHl" firstAttribute="top" secondItem="puk-1H-j7v" secondAttribute="bottom" constant="10" id="BCl-wQ-4fL"/>
+                            <constraint firstItem="LVs-H2-sKw" firstAttribute="top" secondItem="8d4-Ns-KDj" secondAttribute="bottom" constant="20" id="3pX-HF-Pit"/>
+                            <constraint firstItem="8d4-Ns-KDj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="9pd-Q0-SK3"/>
+                            <constraint firstItem="8d4-Ns-KDj" firstAttribute="top" secondItem="ndg-G2-Tqg" secondAttribute="bottom" constant="20" id="G5J-Hd-Rwi"/>
+                            <constraint firstItem="tdl-Ef-jHl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="RSt-la-xAt"/>
+                            <constraint firstItem="tdl-Ef-jHl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="TCf-Ox-gba"/>
+                            <constraint firstItem="hjg-PV-p8u" firstAttribute="top" secondItem="LVs-H2-sKw" secondAttribute="bottom" constant="20" id="VKo-hv-Asd"/>
+                            <constraint firstItem="hjg-PV-p8u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="VfH-9f-hrq"/>
+                            <constraint firstItem="XIX-G3-ZCr" firstAttribute="top" secondItem="puk-1H-j7v" secondAttribute="bottom" constant="20" id="Yr3-7J-Paq"/>
+                            <constraint firstAttribute="trailing" secondItem="88c-0z-26J" secondAttribute="trailing" constant="30" id="Zui-Cv-7pN"/>
+                            <constraint firstAttribute="trailing" secondItem="0Mw-OK-3OJ" secondAttribute="trailing" constant="30" id="eQm-GJ-xPv"/>
                             <constraint firstItem="puk-1H-j7v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="fKf-hi-gKr"/>
-                            <constraint firstAttribute="trailing" secondItem="tdl-Ef-jHl" secondAttribute="trailing" constant="20" id="x7U-Ze-feg"/>
+                            <constraint firstItem="ndg-G2-Tqg" firstAttribute="top" secondItem="tdl-Ef-jHl" secondAttribute="bottom" constant="20" id="gjc-be-l5h"/>
+                            <constraint firstItem="LVs-H2-sKw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="hSW-H0-Jqi"/>
+                            <constraint firstItem="0Mw-OK-3OJ" firstAttribute="top" secondItem="XIX-G3-ZCr" secondAttribute="bottom" constant="20" id="iFm-ag-aB0"/>
+                            <constraint firstAttribute="trailing" secondItem="XIX-G3-ZCr" secondAttribute="trailing" constant="30" id="jps-zA-O51"/>
+                            <constraint firstItem="ndg-G2-Tqg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="kin-fd-ZPk"/>
+                            <constraint firstItem="88c-0z-26J" firstAttribute="top" secondItem="0Mw-OK-3OJ" secondAttribute="bottom" constant="20" id="lV9-JW-HvU"/>
                             <constraint firstAttribute="trailing" secondItem="puk-1H-j7v" secondAttribute="trailing" constant="20" id="zzZ-2c-bdl"/>
                         </constraints>
                     </view>
